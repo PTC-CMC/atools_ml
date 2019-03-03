@@ -98,7 +98,8 @@ def assign_descriptors_monolayers(project, multi=False, override=False,
 
 def rdkit_descriptors(smiles, ndigits=6, include_pc=True,
                       include_moe=False, include_h_bond=False,
-                      ch3_smiles=None):
+                      ch3_smiles=None, barcode_seed=None,
+                      vary_descriptors=None, vary_significant=None):
     """
     Parameters
     ----------

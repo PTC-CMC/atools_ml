@@ -135,4 +135,7 @@ def train_test_split(df, target, drop=None, by=None, test_size=0.25,
         test = df.drop(drop, axis=1).sample(n_test, random_state=random_state)
         train = df.drop(drop, axis=1).loc[~df.index.isin(test.index)]
 
+    print(test_keys)
+    print(train_keys)
+
     return train.drop(target, axis=1), test.drop(target, axis=1), train[target], test[target]
